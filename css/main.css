@@ -93,26 +93,59 @@ textarea {
     font-size: 18px;
     color: #3B3B3B;
    }
+
    h1{
     font-family: 'Oxygen', sans-serif;
     font-size: 3.3em;
     margin: 0;
    }
+
    h2{
     font-size: 2em;
     margin: 0;
    }
+
    h3{
     font-size: 1.4em;
     margin: 0;
     line-height: 1.2;
    }
+
    p{
     font-size: 1em;
     margin: 0;
    }
+
    ul, li{
     margin: 0;
+    padding-inline-start: 0;
+   }
+
+   main{
+    display: grid;
+   }
+
+   button{
+    width: 80px;
+    font-family: 'Oxygen', sans-serif;
+   }
+
+   img{
+    max-width: 324px;
+   }
+
+   figure{
+    margin: 5%;
+   }
+
+   figcaption{
+    color: white;
+    font-style: italic;
+    margin-top: 5px;
+   }
+
+   main{
+    width: 100%;
    }
 
    /************* HEADER STYLES *************/
@@ -125,7 +158,8 @@ textarea {
    }
 
    hgroup{
-    padding: 80px 0 30px 10%;
+    padding: 100px 0 30px 10%;
+    width: 60%;
    }
 
    header h3{
@@ -136,15 +170,17 @@ textarea {
 
    nav{
     padding: 10px 0 40px 0;
+    display: flex;
+    justify-content: flex-end;
    }
 
-   ul{
+   header ul{
     display: flex;
     flex-direction: column;
-    padding-inline-start: 20px;
+    padding-inline-start: 0;
    }
 
-   li{
+   header li{
     list-style: none;
     background-color: #3B3B3B;
     padding: 5% 10%;
@@ -154,11 +190,177 @@ textarea {
     text-transform: uppercase;
    }
 
+   header li a {
+    color: white;
+    text-decoration: none;
+   }
+
    #hamburger-icon{
-    margin-right: 20px;
+    padding-right: 20px;
     font-size: 1.5em;
    }
 
+   #nav-menu{
+    width: 100px;
+   }
+
+   /************* INTRO STYLES *************/
+   #intro{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+   }
+   #intro ul{
+    display: flex;
+    flex-direction: row;
+    margin: 40px 0 60px 0;
+   }
+
+   #intro li {
+    list-style: none;
+    margin: 20px;
+    padding: 0;
+    font-size: 1.3em;
+   }
+
+   #intro h1{
+    text-transform: uppercase;
+    width: 80%;
+    line-height: 1.2;
+    margin: 100px 0 60px 10%;
+   }
+
+   #intro p {
+    width: 80%;
+    margin: 60px 0 60px 10%;
+   }
+
+   #intro ul {
+    margin-left: 10%;
+  }
+
+   #intro li {
+    margin-left: 0;
+  }
+
+   /************* WORK STYLES *************/
+   #work {
+    background: linear-gradient(#dbc1e2, #6d3176);
+   }
+
+   #work h2{
+    text-align: center;
+    margin: 40px 0;
+   }
+
+   #work-item-wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+   }
+
+   .work-items {
+    background-color: #40095b;
+    color: white;
+    margin: 5%;
+   }
+
+   .work-items h3{
+    font-size: 4em;
+    text-align: center;
+    padding: 20% 0 5% 0;
+   }
+
+   .work-items p{
+    padding: 10%;
+   }
+
+   #slideshow{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+   #big-img{
+    width: 80%;
+   }
+
+   #thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+   }
+
+   #thumbnails img {
+    max-width: 60px;
+    max-height: 79px;
+    margin: 1%;
+   }
+
+   /************* SKILLS STYLES *************/
+   #skills{
+    background-color: #3B3B3B;
+    display: flex;
+    justify-content: center;
+   }
+
+   #skills article{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: #3B3B3B;
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+   }
+
+   #skills h2{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+   }
+
+   #skills ul{
+    margin-left: 60px;
+   }
+
+   #skills li{
+    list-style-type: none;
+    margin-top: 10px;
+   }
+
+   /************* CONTACT STYLES *************/
+   #contact{
+    background-color: #40095b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 12%;
+   }
+
+   #headshot{
+    border-radius: 50%;
+    max-width: 200px;
+    max-height: 200px;
+   }
+
+   #contact figure{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    align-self: center;
+   }
+
+   #contact a{
+    color: white;
+    text-decoration: none;
+   }
+
+   #contact p{
+    margin: 80px 0;
+   }
 
 /* ==========================================================================
    Helper classes
@@ -250,6 +452,181 @@ textarea {
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (min-width: 768px){
+  /* Tablet style adjustments */
+
+  /************* HEADER STYLES - TABLET *************/
+  header{
+    padding-left: 5%;
+    padding-right: 0%;
+    width: 95%;
+    position: fixed;
+  }
+
+  hgroup{
+    padding: 10px 0 10px 0;
+    width: 50%;
+  }
+
+  header h2{
+    font-size: 1.2em;
+  }
+
+  header h3{
+    margin: 0;
+    font-size: 1em;
+  }
+
+  #hamburger-icon{
+    display: none;
+  }
+
+  #nav-menu{
+    display: flex;
+    flex-direction: row;
+    width: 310px;
+  }
+
+  nav{
+    padding: 0 10px 0 0;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  header ul{
+    padding-inline-start: 0;
+  }
+
+  header li {
+    padding: 1%;
+    margin: 1.5%;
+    text-align: center;
+    font-size: 1em;
+    width: 90px;
+  }
+
+  header li a {
+    text-align: center;
+  }
+
+  /************* MAIN STYLES - TABLET *************/
+  main{
+    grid-template-columns: 45% 55%;
+    /*grid-template-rows: 4fr 2fr 3fr;*/
+  }
+
+  #intro{
+    grid-column: 1 / 1;
+    grid-row: 1 / -1 ;
+    position: fixed;
+    align-items: flex-start;
+  }
+
+  #intro h1 {
+    max-width: 320px;
+    margin-top: 160px;
+  }
+
+  #intro p {
+    max-width: 340px;
+    margin: 20px 0 60px 40px;
+    font-size: 1.4em;
+  }
+
+  /************* WORK STYLES - TABLET *************/
+
+  #work{
+    grid-column: 2 / -1;
+    padding: 5%;
+  }
+
+  #work h2{
+    margin-top: 100px;
+    font-size: 2.5em;
+  }
+
+  #work-item-wrapper{
+    grid-row-gap: 10px
+  }
+
+  .work-items h3{
+    font-size: 4em;
+    padding: 10% 0 0 0;
+  }
+
+  .work-items p {
+    font-size: 1.2em;
+  }
+
+  /************* SKILLS STYLES - TABLET *************/
+  #skills{
+    grid-column: 2 / -1;
+  }
+
+  #skills ul{
+    width: calc(45% - 60px);
+  }
+
+  #skills article{
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+
+  #contact{
+    grid-column: 2 / -1;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    /*Desktop styles here*/
+    /************* HEADER STYLES - TABLET *************/
+    header li {
+      padding: 2% 3%;
+      margin: 2%;
+      width: 120px;
+      font-size: 1.1em;
+    }
+
+    #intro h1, #intro p, #intro button, #intro ul{
+      margin-left: 80px;
+    }
+
+    #intro p {
+      font-size: 1.1em;
+      max-width: 400px;
+    }
+
+    #intro ul{
+      margin-top: 20px;
+    }
+
+     #work-item-wrapper {
+      grid-template-columns: 50% 50%;
+    }
+
+    #work h3{
+      font-size: 3.5em;
+    }
+
+    #work p {
+      font-size: 1em;
+    }
+
+    #slideshow, #thumbnails{
+      grid-column: 1 / -1;
+    }
+
+    #thumbnails{
+      justify-content: center;
+    }
+
+
 }
 
 @media print,
