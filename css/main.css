@@ -211,6 +211,10 @@ textarea {
     align-items: flex-start;
 
    }
+
+   #intro a{
+    color: #40095b;
+   }
    #intro ul{
     display: flex;
     flex-direction: row;
